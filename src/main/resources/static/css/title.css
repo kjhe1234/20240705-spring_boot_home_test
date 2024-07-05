@@ -28,8 +28,13 @@ span.skill_text02 {
 	font-weight: bold;
 }
 
+td.skill_box {
+	background-color: ffbf69;
+}
 
-
+td.image_box {
+	background-color: ff9f1c;
+}
 
 
 
