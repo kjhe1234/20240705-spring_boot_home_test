@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/resources/css/title.css">
 <title>Main</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<span class="title_text01">I'm kjhe1234 test home</span>
+				<span class="title_text02">I'm kjhe1234 test home</span>
 			</td>
 		</tr>
 		<tr>

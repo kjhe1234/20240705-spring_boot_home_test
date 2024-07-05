@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+span.title_text01 {
+	font-size: 70px;
+	color:#cbf3f0;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+span.title_text02 {
+	font-size: 30px;
+	color:#2ec4b6;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+span.skill_text01 {
+	font-size: 50px;
+	color:#2ec4b6;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+span.skill_text02 {
+	font-size: 20px;
+	color:#cbf3f0;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
