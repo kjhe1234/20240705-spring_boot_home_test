@@ -86,26 +86,24 @@ public class HomeController {
 	@PostMapping(value = "/loginOk")
 	public String loginOk(HttpServletRequest request, Model model, HttpSession session) {
 		
-		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);
-		MemberDto memberDto = null;
+		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);		
 		
 		int loginCheck = memberDao.loginCheckDao(request.getParameter("mid"), request.getParameter("mpw"));
-		// loginCheck 1이면 로그인 성공, 0이면 로그인 실패
+		// loginCheck == 1이면 로그인 성공, 0이면 로그인 실패
 		
-		if (loginCheck != 1) { //참이면 로그인 실패
-			model.addAttribute("loginFail", 1);
-			
+		MemberDto memberDto = null;
+		
+		if (loginCheck != 1) {//참이면 로그인 실패
+			model.addAttribute("loginFail", 1);			
 		} else {
-			
-			session.setAttribute("sessionId", request.getParameter("mid"));
+			//로그인 성공->세션에 현재 로그인 성공된 아이디를 저장			
+			session.setAttribute("sessionId", request.getParameter("mid"));	
 			memberDto = memberDao.getMemberInfoDao(request.getParameter("mid"));
-			model.addAttribute("mid", memberDto.getMid());
-			model.addAttribute("mdate", memberDto.getMdate());
 			
+			model.addAttribute("mname", memberDto.getMname());//로그인 회원 이름		
+			model.addAttribute("mdate", memberDto.getMdate());//로그인 회원 가입일
 		}
-		
 		return "loginOk";
-		
 	}
 	
 	@GetMapping(value ="/logout")
