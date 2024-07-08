@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,12 +17,25 @@
 			<td width="5%">
 				<a href= "index" ><span class="menu">Home</span></a>
 			</td>
+			<c:choose>
+				<c:when test="${sessionScope.sessionId eq null}">
+					<td width="5%">
+						<a href= "login"><span class="menu">Login</span></a>
+					</td>
+					<td width="4%">
+						<a href= "join"><span class="menu">Join</span></a>
+					</td>
+				</c:when>
+				<c:otherwise>
+			<td width="6%">
+				<a href= "Logout"><span class="menu">Logout</span></a>
+			</td>
 			<td width="5%">
-				<a href= "login"><span class="menu">Login</span></a>
+				<a href= "modify"><span class="menu">Modify</span></a>
 			</td>
-			<td width="4%">
-				<a href= "join"><span class="menu">Join</span></a>
-			</td>
+				</c:otherwise>
+
+			</c:choose>
 			<td width="6%">
 				<a href= "profile"><span class="menu">Profile</span></a>
 			</td>
@@ -36,8 +50,12 @@
 			</td>
 		</tr>	
 		<tr>
-			<td height="20">
-				&nbsp;
+			<td height="20" align="right" colspan="8">
+				<c:if test="${sessionScope.sessionId !=null }">
+					<span class="loginid">
+						LOGIN : <c:out value="${sessionScope.sessionId}"></c:out>
+					</span>
+				</c:if>
 			</td>
 		</tr>
 	</table>
