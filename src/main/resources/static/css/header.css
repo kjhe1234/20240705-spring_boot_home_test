@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+tr.header_line {
+	background-color: #D4F1F4;
+	height: 70px;
+}
+
+span.menu {
+	color: #189AB4;
+	font-family: Arial;
+	font-size:20px;
+}
+
+a:link {
+	text-decoration:none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration:underline;
+	color: black;
+	font-weight: bold;
+}
