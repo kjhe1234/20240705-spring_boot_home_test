@@ -11,7 +11,16 @@ input.input_box01 {
 	border:1px solid #05445E;
 	width: 250px;
 	font-family: Arial;
-	color: #75E6DA;
+	color: black;
+	font-size: 20px;
+	padding:5px;
+}
+
+input.input_box02 {
+	border:1px solid #05445E;
+	width: 500px;
+	font-family: Arial;
+	color: black;
 	font-size: 20px;
 	padding:5px;
 }
@@ -40,4 +49,13 @@ input.btn01:hover {
 	padding:5px;
 	background-color: #189AB4;
 	cursor: pointer;
+}
+
+textarea.text_area {
+	border: 1px solid #05445E;
+	font-family: Msgothic, Arial;
+	font-size:20px;
+	padding:5px;
+	width: 500px;
+	
 }

@@ -41,6 +41,10 @@ public class HomeController {
 		return "writeForm";
 	}
 	
+	@GetMapping(value = "/list")
+	public String list() {
+		return "boardlist";
+	}
 	
 	
 	

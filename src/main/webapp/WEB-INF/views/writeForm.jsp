@@ -56,15 +56,15 @@
 							<span class="content_text">제목 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="btitle">
+							<input class="input_box02" type="text" name="btitle">
 						</td>
 					</tr>
 					<tr>
-						<td align="right">
+						<td align="right" valign="top">
 							<span class="content_text">내용 :</span>
 						</td>
 						<td>
-							<textarea rows="10" cols="70" name="bcontent"></textarea>
+							<textarea class="text_area" rows="10" cols="50" name="bcontent"></textarea>
 						</td>
 					</tr>
 					<tr>

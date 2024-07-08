@@ -26,7 +26,7 @@
 				<a href= "profile"><span class="menu">Profile</span></a>
 			</td>
 			<td width="5%">
-				<a href= "#"><span class="menu">Board</span></a>
+				<a href= "list"><span class="menu">Board</span></a>
 			</td>
 			<td width="5%">
 				<a href= "contact"><span class="menu">Contact</span></a>
