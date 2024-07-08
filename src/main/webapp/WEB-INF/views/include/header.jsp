@@ -28,7 +28,7 @@
 				</c:when>
 				<c:otherwise>
 			<td width="6%">
-				<a href= "Logout"><span class="menu">Logout</span></a>
+				<a href= "logout"><span class="menu">Logout</span></a>
 			</td>
 			<td width="5%">
 				<a href= "modify"><span class="menu">Modify</span></a>

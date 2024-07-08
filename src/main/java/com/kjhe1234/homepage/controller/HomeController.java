@@ -106,41 +106,39 @@ public class HomeController {
 		return "loginOk";
 	}
 	
-	@GetMapping(value ="/logout")
+	@GetMapping(value = "/logout")
 	public String logout(HttpSession session, HttpServletResponse response) {
 		
 		//컨트롤러에서 경고창 띄우기
 		try {
-			response.setContentType("text/html;charset=utf-8"); // 경고창 텍스트를 utf-8로 인코딩
+			response.setContentType("text/html;charset=utf-8");//경고창 텍스트를 utf-8로 인코딩
 			response.setCharacterEncoding("utf-8");
 			PrintWriter printWriter = response.getWriter();
-			printWriter.println("<script>alert('"+"로그아웃 하시겠습니까?"+"');location.href='"+"login"+"'</script>");
+			printWriter.println("<script>alert('"+"로그아웃 하시겠습니까?"+"');location.href='"+"login"+"';</script>");
 			printWriter.flush();
-			session.invalidate(); //로그아웃 -> 세션삭제
-			
+			session.invalidate();//로그아웃->세션삭제
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		
-		
 		return "login";
 	}
 	
 	
-	@RequestMapping(value = "/modify")
+	@GetMapping(value = "/modify")
 	public String modify(HttpSession session, Model model) {
 		
-		String sid = (String)session.getAttribute("sessionId");
+		String sid = (String) session.getAttribute("sessionId");
 		// 현재 로그인한 회원의 아이디
 		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);
-		MemberDto memberDto = memberDao.getMemberInfoDao(sid);
+		
+		MemberDto memberDto = memberDao.getMemberInfoDao(sid);//현재 로그인한 회원의 모든 정보
 		
 		model.addAttribute("mDto", memberDto);
 		
 		return "modifyForm";
-	}	
+	}
 	
 	
 	

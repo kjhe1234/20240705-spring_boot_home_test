@@ -26,14 +26,14 @@
 		</tr>
 		<tr>
 			<td class="content_box" align="center">
-				<form action="modifyOk" method="post" name="modify">				
+				<form action="modifyOk" method="post" name="joinForm">				
 				<table border="0" cellpadding="10" cellspacing="0">
 					<tr>
 						<td align="right">
 							<span class="content_text">아 이 디 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="mid" value=${mid } readonly="readonly">
+							<input class="input_box01" type="text" name="mid" value=${mDto.mid } readonly="readonly">
 						</td>
 					</tr>
 					<tr>
@@ -41,7 +41,7 @@
 							<span class="content_text">비밀번호 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="password" name="mpw" value=${mpw }>
+							<input class="input_box01" type="password" name="mpw" value=${mDto.mpw }>
 						</td>
 					</tr>
 					<tr>
@@ -56,7 +56,7 @@
 							<span class="content_text">회원이름 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="mname" value=${mname }>
+							<input class="input_box01" type="text" name="mname" value=${mDto.mname }>
 						</td>
 					</tr>
 					<tr>
@@ -64,7 +64,7 @@
 							<span class="content_text">이 메 일 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="memail" value=${memail }>
+							<input class="input_box01" type="text" name="memail" value=${mDto.memail }>
 						</td>
 					</tr>
 					<tr>
@@ -72,7 +72,7 @@
 					</tr>
 					<tr>
 						<td colspan="2" align="center">							
-							<input class="btn01" type="button" value="수정완료" onclick="modifyOk()">
+							<input class="btn01" type="button" value="수정완료" onclick="joinCheck()">
 							<input class="btn01" type="button" value="취소" onclick="javascript:window.location.href='history.go(-1)'">
 						</td>
 					</tr>
