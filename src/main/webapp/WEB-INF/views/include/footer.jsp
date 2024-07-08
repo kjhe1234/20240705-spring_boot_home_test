@@ -16,7 +16,7 @@
 		</tr>
 		<tr class="footer_line">
 			<td>
-				<span class:"footer_text">Copyright @ kjhe1234. All Rights Reserved </span>
+				<span class:"footer_text">Copyright ® kjhe1234. All Rights Reserved </span>
 			</td>
 		</tr>
 		<tr class="footer_line">

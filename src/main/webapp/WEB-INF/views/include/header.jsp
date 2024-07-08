@@ -17,19 +17,19 @@
 				<a href= "index" ><span class="menu">Home</span></a>
 			</td>
 			<td width="5%">
-				<a href= "#"><span class="menu">Login</span></a>
+				<a href= "login"><span class="menu">Login</span></a>
 			</td>
 			<td width="4%">
-				<a href= "#"><span class="menu">Join</span></a>
+				<a href= "join"><span class="menu">Join</span></a>
 			</td>
 			<td width="6%">
-				<a href= "#"><span class="menu">Profile</span></a>
+				<a href= "profile"><span class="menu">Profile</span></a>
 			</td>
 			<td width="5%">
 				<a href= "#"><span class="menu">Board</span></a>
 			</td>
 			<td width="5%">
-				<a href= "#"><span class="menu">Contact</span></a>
+				<a href= "contact"><span class="menu">Contact</span></a>
 			</td>
 			<td width="5%">
 				&nbsp;

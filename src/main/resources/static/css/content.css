@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+span.content_text {
+	font-size: 20px;
+	font-family: Msgothic;
+	color: #189AB4;
+	font-weight: bold;
+}
+
+input.input_box01 {
+	border:1px solid #05445E;
+	width: 250px;
+	font-family: Arial;
+	color: #75E6DA;
+	font-size: 20px;
+	padding:5px;
+}
+
+input.btn01 {
+	border: 2px solid #05445E;
+	width: 150px;
+	height: 40px;
+	font-family: Msgothic;
+	font-size:20px;
+	padding:5px;
+	background-color: #D4F1F4;
+}
+
+td.content_box {
+	height: 300px;
+	background-color: #75E6DA;
+}
+
+input.btn01:hover {
+	border: 2px solid #05445E;
+	width: 150px;
+	height: 40px;
+	font-family: Msgothic;
+	font-size:20px;
+	padding:5px;
+	background-color: #189AB4;
+	cursor: pointer;
+}

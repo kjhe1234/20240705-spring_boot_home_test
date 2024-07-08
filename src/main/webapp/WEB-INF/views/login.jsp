@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="/resources/css/title.css">
+<link rel="stylesheet" href="/resources/css/content.css">
 <title>Main</title>
 </head>
 <body>
@@ -22,42 +23,38 @@
 			</td>
 		</tr>
 		<tr>
-			<td>
+			<td aling="center" class="content_box">
+				<form action="loginOk" method="post" name="loginForm">
+				<center>
 				<table border="0" cellpadding="10" cellspacing="0">
 					<tr>
-						<td class="skill_box">
-							<span class="skill_text01">J</span><span class="skill_text02">ava</span>
+						<td align="right">
+							<span class="content_text">아이디 :</span>
 						</td>
-						<td rowspan="6" class="image_box">
-							<img src="/resources/img/spring.jpg">
-						</td>
-					</tr>
-					<tr>
-						<td class="skill_box">
-							<span class="skill_text01">J</span><span class="skill_text02">sp</span>
+						<td>
+							<input class="input_box01" type="text" name="mid">
 						</td>
 					</tr>
 					<tr>
-						<td class="skill_box">
-							<span class="skill_text01">S</span><span class="skill_text02">pringboot</span>
+						<td align="right">
+							<span class="content_text">비밀번호 :</span>
 						</td>
-					<tr>
-						<td class="skill_box">
-							<span class="skill_text01">J</span><span class="skill_text02">avascript</span>
-						</td>
-					</tr>
-					<tr>
-						<td class="skill_box">
-							<span class="skill_text01">H</span><span class="skill_text02">tml5&css</span>
+						<td>
+							<input class="input_box01" type="password" name="mpw">
 						</td>
 					</tr>
 					<tr>
-						<td class="skill_box">
-							<span class="skill_text01">D</span><span class="skill_text02">atabase</span>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<input class="btn01" type="submit" value="로그인">
+							<input class="btn01" type="button" value="회원가입" onclick="javascript:window.location.href='join'">
 						</td>
 					</tr>
-				</tr>
 				</table>
+				</center>
+				</form>
 			</td>
 		</tr>
 
