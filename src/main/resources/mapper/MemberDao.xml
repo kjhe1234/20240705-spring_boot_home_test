@@ -6,4 +6,16 @@
     
 <mapper namespace="com.kjhe1234.hompage.dao.MemberDao">
 
+	<!--  회원 가입 -->
+	<insert id="joinDao">
+		INSERT INTO pmembers(mid, mpw, mname, memail) VALUES(#{param1},#{param2},#{param3},#{param4})
+	</insert>
+
+	<!-- 아이디 존재여부 체크 -->
+	<select id="idcheckDao" resultType="int">
+		SELECT count(*) FROM pmembers WHERE mid=#{param1}
+	</select>>
+
+
+
 </mapper>    

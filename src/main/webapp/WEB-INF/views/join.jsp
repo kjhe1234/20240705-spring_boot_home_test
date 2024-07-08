@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="/resources/css/title.css">
 <link rel="stylesheet" href="/resources/css/content.css">
+<script type="text/javascript" src="/resources/js/join.js"></script>
 <title>Main</title>
 </head>
 <body>
@@ -72,7 +73,7 @@
 					</tr>
 					<tr>
 						<td colspan="2" align="center">
-							<input class="btn01" type="submit" value="가입완료">
+							<input class="btn01" type="button" value="가입완료" onclick="joinCheck()">
 							<input class="btn01" type="button" value="로그인" onclick="javascript:window.location.href='login'">
 						</td>
 					</tr>
