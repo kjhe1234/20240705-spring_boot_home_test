@@ -15,5 +15,19 @@
 	<select id="listDao" resultType="com.kjhe1234.homepage.dto.BoardDto">
 		SELECT * FROM pboard ORDER BY bnum DESC
 	</select>
+	
+	<!-- 게시판 글 내용 보기 -->
+	<select id="contentViewDao" resultType="com.kjhe1234.homepage.dto.BoardDto">
+		SELECT * FROM pboard  WHERE bnum=#{param1}
+	</select>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 </mapper> 
