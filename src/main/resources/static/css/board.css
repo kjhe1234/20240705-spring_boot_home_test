@@ -19,6 +19,18 @@ td.board_content {
 	
 }
 
+a.contentlnk:visited {
+	font-family: Msgothic, Arial;
+	font-size: 17px;
+	color : #000000;
+	text-decoration:none;
+}
 
+a.contentlink:hover {
+	font-family: Msgothic, Arial;
+	font-size: 17px;
+	color : black;
+	font-weight:bold;
+}
 
 

@@ -28,3 +28,18 @@ span.loginid {
 	font-size:20px;
 	font-weight: bold;
 }
+
+a.menu_link:link {
+	font-family: Msgothic, Arial;
+	font-size: 17px;
+	color : #ffffff;
+	text-decoration:none;	
+}
+
+a.menu_link:hover {
+	font-family: Msgothic, Arial;
+	font-size: 17px;
+	color : #000000;
+	text-decoration:none;	
+}
+
