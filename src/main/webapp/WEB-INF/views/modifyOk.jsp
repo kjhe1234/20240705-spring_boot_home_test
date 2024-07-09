@@ -20,20 +20,14 @@
 			</td>
 		</tr>
 		<tr>
-			<td align="center">
-				<span class="title_text02">I'm kjhe1234 test home</span>
-			</td>
-		</tr>
-		<tr>
-			<td class="content_box" align="center">
-				<form action="modifyOk" method="post" name="joinForm">				
+			<td class="content_box" align="center">								
 				<table border="0" cellpadding="10" cellspacing="0">
 					<tr>
 						<td align="right">
 							<span class="content_text">아 이 디 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="mid" value=${mDto.mid } readonly="readonly">
+							<input class="input_box01" type="text" name="mid" value="${mDto.mid }" readonly="readonly">
 						</td>
 					</tr>
 					<tr>
@@ -41,22 +35,15 @@
 							<span class="content_text">비밀번호 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="password" name="mpw" value=${mDto.mpw }>
+							<input class="input_box01" type="password" name="mpw" value="${mDto.mpw}" readonly="readonly">
 						</td>
-					</tr>
-					<tr>
-						<td align="right">
-							<span class="content_text">비밀번호확인 :</span>
-						</td>
-						<td>
-							<input class="input_box01" type="password" name="mpwCheck">						</td>
-					</tr>
+					</tr>					
 					<tr>
 						<td align="right">
 							<span class="content_text">회원이름 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="mname" value=${mDto.mname }>
+							<input class="input_box01" type="text" name="mname" value="${mDto.mname}" readonly="readonly">
 						</td>
 					</tr>
 					<tr>
@@ -64,7 +51,15 @@
 							<span class="content_text">이 메 일 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="memail" value=${mDto.memail }>
+							<input class="input_box01" type="text" name="memail" value="${mDto.memail }" readonly="readonly">
+						</td>
+					</tr>
+					<tr>
+						<td align="right">
+							<span class="content_text">가 입 일 :</span>
+						</td>
+						<td>
+							<input class="input_box01" type="text" name="mdate" value="${mDto.mdate }" readonly="readonly">
 						</td>
 					</tr>
 					<tr>
@@ -72,12 +67,11 @@
 					</tr>
 					<tr>
 						<td colspan="2" align="center">							
-							<input class="btn01" type="button" value="수정완료" onclick="joinCheck()">
-							<input class="btn01" type="button" value="취소" onclick="javascript:window.location.href='index'">
+							<input class="btn01" type="button" value="수정" onclick="javascript:window.location.href='modify'">
+							<input class="btn01" type="button" value="완료" onclick="javascript:window.location.href='index'">
 						</td>
 					</tr>
-				</table>
-				</form>
+				</table>				
 			</td>
 		</tr>
 	</table>

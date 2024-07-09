@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="/resources/css/title.css">
 <link rel="stylesheet" href="/resources/css/content.css">
+<script type="text/javascript" src="/resources/js/write.js"></script>
 <title>Main</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
 							<span class="content_text">아 이 디 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="bid">
+							<input class="input_box01" type="text" name="bid" value="${mDto.mid }" readonly="readonly">
 						</td>
 					</tr>
 					<tr>
@@ -40,7 +41,7 @@
 							<span class="content_text">이 름 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="bname">
+							<input class="input_box01" type="text" name="bname" value="${mDto.mname }" readonly="readonly">
 						</td>
 					</tr>
 					<tr>
@@ -48,7 +49,7 @@
 							<span class="content_text">이 메 일 :</span>
 						</td>
 						<td>
-							<input class="input_box01" type="text" name="bemail">
+							<input class="input_box01" type="text" name="bemail" value="${mDto.memail }" readonly="readonly">
 						</td>
 					</tr>
 					<tr>
@@ -72,7 +73,7 @@
 					</tr>
 					<tr>
 						<td colspan="2" align="center">
-							<input class="btn01" type="submit" value="작성완료">
+							<input class="btn01" type="button" value="작성완료" onclick="writeCheck()">
 							<input class="btn01" type="button" value="취소" onclick="javascript:window.location.href='list'">
 						</td>
 					</tr>
