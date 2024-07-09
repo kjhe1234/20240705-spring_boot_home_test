@@ -2,6 +2,7 @@ package com.kjhe1234.homepage.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.kjhe1234.homepage.dao.BoardDao;
 import com.kjhe1234.homepage.dao.MemberDao;
+import com.kjhe1234.homepage.dto.BoardDto;
 import com.kjhe1234.homepage.dto.MemberDto;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -86,11 +89,19 @@ public class HomeController {
 	@GetMapping(value="/writeOk")
 	public String writeOk(HttpServletRequest request,Model model) {
 		
+		BoardDao boardDao = sqlSession.getMapper(BoardDao.class);		
+		boardDao.writeDao(request.getParameter("bid"), request.getParameter("bname"), request.getParameter("btitle"), request.getParameter("bcontent"));
+		
 		return "redirect:list";
 	}
 	
 	@GetMapping(value = "/list")
-	public String list() {
+	public String list(Model model) {
+		
+		BoardDao boardDao = sqlSession.getMapper(BoardDao.class);		
+		ArrayList<BoardDto> bDtos = boardDao.listDao();
+		model.addAttribute("bDtos", bDtos);
+		
 		return "boardlist";
 	}
 	
