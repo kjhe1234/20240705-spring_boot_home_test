@@ -13,8 +13,8 @@ public interface BoardDao {
 	public void contentModifyDao(String bnum, String btitle, String bcontent); //글 내용 수정
 	public void contentDeleteDao(String bnum); // 글 삭제하기
 	public int boardTotalCountDao(); // 게시판에 저장된 모든글의 총 개수 확인
-	
-	
+	public ArrayList<BoardDto> searchKeyDao(int amoint, int pageNum, String searchKey); // 게시판 제목 또는 내용 키워드 검색
+	public int searchResultTotalDao(String searchKey); //게시판 검색 결과글 총 개수  
 	
 	
 	

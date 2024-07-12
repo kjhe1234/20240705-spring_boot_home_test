@@ -123,6 +123,36 @@ public class HomeController {
 		return "boardlist";
 	}
 	
+	@GetMapping(value = "/list2")
+	public String list2(Model model, Criteria criteria, HttpServletRequest request) {
+		
+		BoardDao boardDao = sqlSession.getMapper(BoardDao.class);	
+		
+		String pageNum = request.getParameter("pageNum"); // 사용자가 클릭한 게시판 페이지 번호
+		String searchKey = request.getParameter("searchKey");
+		
+		if(pageNum != null) { // 게시판 메뉴를 클릭해서 게시판 목록이 보일 경우 pageNum값이 없으므로 에러 발생
+			criteria.setPageNum(Integer.parseInt(pageNum));
+			// 사용자가 클릭한 페이지 번호를 criteria 객체 내 변수인 pageNum값으로 셋팅
+		}
+		
+		int total = boardDao.searchResultTotalDao(searchKey); // 검색된 게시물 총 개수
+		
+		PageDto pageDto = new PageDto(total,criteria);
+		
+		int realEndPage = (int) Math.ceil(total*1.0 /criteria.getAmount());
+		
+		//ArrayList<BoardDto> bDtos = boardDao.listDao(criteria.getAmount(), criteria.getPageNum());
+		ArrayList<BoardDto> bDtos = boardDao.searchKeyDao(criteria.getAmount(), criteria.getPageNum(), searchKey);
+		model.addAttribute("bDtos", bDtos);
+		model.addAttribute("pageDto", pageDto);
+		model.addAttribute("currPage", criteria.getPageNum()); // 현재 출력하고 있는 페이지 번호 전송
+		model.addAttribute("realEndPage", realEndPage);
+		model.addAttribute("searchKey", searchKey);
+		
+		return "boardlist2";
+	}
+	
 	@PostMapping(value = "/joinOk")
 	public String joinOk(HttpServletRequest request, Model model) {
 		

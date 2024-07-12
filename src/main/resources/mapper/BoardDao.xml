@@ -21,6 +21,21 @@
 						WHERE pagenum = #{param2}
 	</select>
 	
+	<!-- 게시판 검색 결과 리스트 -->
+	<select id="searchKeyDao" resultType="com.kjhe1234.homepage.dto.BoardDto">
+		SELECT * FROM 
+		
+			(SELECT A.*, CEIL((ROWNUM/#{param1}))pagenum, ROWNUM
+				FROM
+					(SELECT * FROM pboard WHERE btitle LIKE '%' || #{param3} || '%' OR bcontent LIKE '%' || #{param3} || '%' ORDER BY bnum DESC)A)
+						WHERE pagenum = #{param2}
+	</select>
+	
+	<!-- 게시판 글 검색 결과 총 갯수 -->
+	<select id="searchResultTotalDao" resultType="int">
+		SELECT count(*) FROM pboard WHERE btitle LIKE '%' || #{param1} || '%' OR bcontent LIKE '%' || #{param1} || '%' ORDER BY bnum DESC
+	</select>
+	
 	<!-- 게시판 글 내용 보기 -->
 	<select id="contentViewDao" resultType="com.kjhe1234.homepage.dto.BoardDto">
 		SELECT * FROM pboard  WHERE bnum=#{param1}
