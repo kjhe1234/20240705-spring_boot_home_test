@@ -217,7 +217,7 @@ public class HomeController {
 		String sid = (String) session.getAttribute("sessionId"); // 현재 로그인 중인 아이디
 		BoardDto bDto = boardDao.contentViewDao(request.getParameter("bnum"));
 
-		if (sid.equals(bDto.getBid()) || (sid.equals("admin"))) { //참이면 글을 쓴 회원과 현재 로그인 중인 아이디가 일치 -> 수정 삭제 가능
+		if (sid != null && (sid.equals(bDto.getBid()) || (sid.equals("admin")))) { //참이면 글을 쓴 회원과 현재 로그인 중인 아이디가 일치 -> 수정 삭제 가능
 			MemberDto mDto = memberDao.getMemberInfoDao(bDto.getBid());
 
 			model.addAttribute("bDto", bDto);
@@ -281,7 +281,6 @@ public class HomeController {
 	
 	
 	
-	@
 	
 	
 	
