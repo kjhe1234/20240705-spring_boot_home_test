@@ -26,6 +26,11 @@
 			</td>
 		</tr>
 		<tr>
+			<td align="left" colspan="5">
+				총${pageDto.total}건 &nbsp; ${currPage }page/${realEndPage }page		
+			</td>
+		</tr>
+		<tr>
 			<td aling="center" class="content_box">
 				<table border="0" cellpadding="10" cellspacing="0">
 					<tr>
