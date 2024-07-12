@@ -11,7 +11,7 @@ public interface BoardDao {
 	public BoardDto contentViewDao(String bnum); // 글 내용 보기
 	public void contentModifyDao(String bnum, String btitle, String bcontent); //글 내용 수정
 	public void contentDeleteDao(String bnum); // 글 삭제하기
-	
+	public int boardTotalCountDao(); // 게시판에 저장된 모든글의 총 개수 확인
 	
 	
 	

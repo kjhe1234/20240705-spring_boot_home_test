@@ -57,20 +57,33 @@
 						</td>
 					</tr>
 					</c:forEach>
-					
+			
 					<tr>
 						<td colspan="5" align="right">
 							<input class="btn01" type="button" value="글쓰기" onclick="javascript:window.location.href='write'">
 						</td>
+					</tr>
 				</table>
 			</td>
 		</tr>
-
 	</table>
+		<tr>
+					<td colspan="5" align="center">
+						<c:if test="${pageDto.prev }">
+							<a href="list?pageNum=${pageDto.startPage-10 }">◀</a>
+						</c:if>
+						&nbsp;&nbsp;
+						<c:forEach begin="${pageDto.startPage}" end="${pageDto.endPage}" var="pageNumber">
+							<a href="list?pageNum=${pageNumber}">${pageNumber}</a>
+						</c:forEach>
+						&nbsp;&nbsp;
+						<c:if test="${pageDto.next }">
+							<a href="list?pageNum=${pageDto.startPage+10 }">▶</a>
+						</c:if>
+					</td>
+		</tr>
 	</center>
 	<%@ include file = "include/footer.jsp" %>
-
-
 
 </body>
 </html>

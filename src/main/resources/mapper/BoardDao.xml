@@ -31,7 +31,10 @@
 		DELETE FROM pboard WHERE bnum=#{param1}
 	</delete>
 	
-	
+	<!-- 게시판 총 글수 -->
+	<select id="boardTotalCountDao" resultType="int">
+		SELECT COUNT(*) FROM pboard
+	</select>
 	
 	
 	
