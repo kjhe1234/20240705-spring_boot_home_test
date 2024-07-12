@@ -188,6 +188,7 @@ public class HomeController {
 			//로그인 성공->세션에 현재 로그인 성공된 아이디를 저장			
 			session.setAttribute("sessionId", request.getParameter("mid"));	
 			memberDto = memberDao.getMemberInfoDao(request.getParameter("mid"));
+			session.setAttribute("sessionName", memberDto.getMname());//세션에 로그인한 회원의 이름이 저장
 			
 			model.addAttribute("mname", memberDto.getMname());//로그인 회원 이름		
 			model.addAttribute("mdate", memberDto.getMdate());//로그인 회원 가입일
