@@ -109,6 +109,7 @@ public class HomeController {
 		}
 		
 		int total = boardDao.boardTotalCountDao(); // 게시판 내 모든 글의 총 개수
+		int realEndPage = (int) Math.ceil(total*1.0 /criteria.getAmount());
 		
 		PageDto pageDto = new PageDto(total, criteria);
 		
@@ -116,7 +117,8 @@ public class HomeController {
 		ArrayList<BoardDto> bDtos = boardDao.listDao(criteria.getAmount(), criteria.getPageNum());
 		model.addAttribute("bDtos", bDtos);
 		model.addAttribute("pageDto", pageDto);
-		model.addAttribute("currPage", pageNum); // 현재 출력하고 있는 페이지 번호 전송
+		model.addAttribute("currPage", criteria.getPageNum()); // 현재 출력하고 있는 페이지 번호 전송
+		model.addAttribute("realEndPage", realEndPage);
 		
 		return "boardlist";
 	}

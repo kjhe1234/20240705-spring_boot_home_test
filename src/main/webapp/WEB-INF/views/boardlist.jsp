@@ -70,6 +70,7 @@
 		<tr>
 					<td colspan="5" align="center">
 						<c:if test="${pageDto.prev }">
+							<a class="pagelink" href="list?pageNum=1">◀◀</a> &nbsp;
 							<a class="pagelink" href="list?pageNum=${pageDto.startPage-10 }">◀</a>
 						</c:if>
 						&nbsp;&nbsp;
@@ -85,7 +86,8 @@
 						</c:forEach>
 						&nbsp;&nbsp;
 						<c:if test="${pageDto.next }">
-							<a class="pagelink" href="list?pageNum=${pageDto.startPage+10 }">▶</a>
+							<a class="pagelink" href="list?pageNum=${pageDto.startPage+10 }">▶</a>&nbsp;
+							<a class="pagelink" href="list?pageNum=${realEndPage }">▶▶</a>
 						</c:if>
 					</td>
 		</tr>
