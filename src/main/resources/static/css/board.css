@@ -33,4 +33,33 @@ a.contentlink:hover {
 	font-weight:bold;
 }
 
+a.pagelnk:visited {
+	font-family: HMKMMAG, Arial;
+	font-size: 17px;
+	color : gray;
+	text-decoration:none;
+}
+
+a.pagelnk:hover {
+	font-family: HMKMMAG, Arial;
+	font-size: 17px;
+	color : black;
+	font-weight:bold;
+}
+
+span.currpage {
+	font-family: HMKMMAG, Arial;
+	font-size: 17px;
+	color: #408080;
+	font-weight:1px solid #253407;
+	background-color: #80ffff;
+	font-weight: bold;
+	padding: 2px;
+
+	
+}
+
+
+
+
 
