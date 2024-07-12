@@ -113,7 +113,7 @@ public class HomeController {
 		PageDto pageDto = new PageDto(total, criteria);
 		
 		
-		ArrayList<BoardDto> bDtos = boardDao.listDao();
+		ArrayList<BoardDto> bDtos = boardDao.listDao(criteria.getAmount(), criteria.getPageNum());
 		model.addAttribute("bDtos", bDtos);
 		model.addAttribute("pageDto", pageDto);
 		
